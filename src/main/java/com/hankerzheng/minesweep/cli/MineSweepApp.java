@@ -68,6 +68,8 @@ public class MineSweepApp {
                 mineSweepController.checkPosition(Integer.parseInt(params[1]), Integer.parseInt(params[2]));
             } else if (params[0].equals("m") || params.equals("mark")) {
                 mineSweepController.markPosition(Integer.parseInt(params[1]), Integer.parseInt(params[2]));
+            } else if (params[0].equals("a") || params.equals("around")) {
+                mineSweepController.aroundPosition(Integer.parseInt(params[1]), Integer.parseInt(params[2]));
             } else {
                 throw new IncorrectUserInputException("Unsupport move detected!! Supported moves are 'c'/'check' and 'm'/'mark'");
             }

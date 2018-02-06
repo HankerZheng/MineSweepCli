@@ -47,15 +47,26 @@ public class MineSweepController {
         }
     }
 
+    public void aroundPosition(final int row, final int col) throws PositionUnreachableException {
+        positionPreCheck(row, col);
+        checkPositionsAround(row, col);
+
+    }
+
     private void checkPositionsAround(final int row, final int col) throws PositionUnreachableException {
         for (final int delRow : MineGroundUtils.ITERATE_SEQ) {
             for (final int delCol : MineGroundUtils.ITERATE_SEQ) {
-                if (isPositionInRange(row + delRow, col + delCol)) {
+                if (isPositionInRange(row + delRow, col + delCol)
+                        && isPositionUnspottedInView(row + delRow, col + delCol)) {
                     checkPosition(row + delRow, col + delCol);
                 }
             }
 
         }
+    }
+
+    private boolean isPositionUnspottedInView(final int row, final int col) {
+        return mineSweepView.getMineGroundView()[row][col] == MineGroundUtils.UNSPOTTED;
     }
 
     public MineSweepView getMineSweepView() {

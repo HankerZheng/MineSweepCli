@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="minesweepcli">
+    <output-path>$PROJECT_DIR$/out/artifacts/minesweepcli</output-path>
+    <root id="archive" name="minesweepcli.jar" />
+  </artifact>
+</component>

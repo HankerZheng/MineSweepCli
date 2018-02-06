@@ -13,7 +13,7 @@ public class MineGroundUtilsTest {
     }
 
     private void printMines(final Set<Integer> mines, final int height, final int width) {
-        for(final Integer mine: mines) {
+        for (final Integer mine : mines) {
             System.out.format("row: %d, col: %d\n", mine / width, mine % width);
         }
     }

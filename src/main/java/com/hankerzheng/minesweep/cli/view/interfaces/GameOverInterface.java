@@ -1,6 +1,6 @@
-package com.hankerzheng.minesweep.cli.view;
+package com.hankerzheng.minesweep.cli.view.interfaces;
 
-import com.hankerzheng.minesweep.cli.controller.MineSweep;
+import com.hankerzheng.minesweep.cli.model.GameStatus;
 
 public class GameOverInterface implements UserInterface {
 
@@ -9,21 +9,20 @@ public class GameOverInterface implements UserInterface {
     private static final String COMMON_INFO =
             "Press RETURN to the WELCOME page...\n" +
                     "Press CTRL + C to end the program...\n";
+    private GameStatus gameStatus;
 
-
-    private final MineSweep mineSweep;
-
-    public GameOverInterface(final MineSweep mineSweep) {
-        this.mineSweep = mineSweep;
+    public GameOverInterface(GameStatus gameStatus) {
+        this.gameStatus = gameStatus;
     }
 
+    @Override
     public void display() {
-        if (mineSweep.isWin()) {
+        if (gameStatus == GameStatus.WIN_GAME) {
             System.out.println(WIN_INFO);
-        } else if (mineSweep.isLost()) {
+        }
+        if (gameStatus == gameStatus.LOSE_GAME) {
             System.out.println(LOST_INFO);
         }
-        System.out.println();;
         System.out.println(COMMON_INFO);
     }
 }

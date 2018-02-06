@@ -1,4 +1,4 @@
-package com.hankerzheng.minesweep.cli.view;
+package com.hankerzheng.minesweep.cli.view.interfaces;
 
 public class WelcomeInterface implements UserInterface {
 

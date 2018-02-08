@@ -1,10 +1,0 @@
-
-csquid:S2094"BRemove this empty class, write its code or make it an "interface".(éÏàÍùÿÿÿÿ8‘œûç–,
-vsquid:UselessImportCheck"HRemove this unused import 'com.hankerzheng.minesweep.cli.utils.IOUtils'.(íçúëøÿÿÿÿ8‘œûç–,
-squid:UselessImportCheck"`Remove this unused import 'com.hankerzheng.minesweep.cli.exception.IncorrectUserInputException'.(ÚÃèîÿÿÿÿÿ8‘œûç–,
-†squid:UselessImportCheck"XRemove this unused import 'com.hankerzheng.minesweep.cli.view.interfaces.GameInterface'.(Å…¼şÿÿÿÿ8‘œûç–,
-‰squid:UselessImportCheck"[Remove this unused import 'com.hankerzheng.minesweep.cli.view.interfaces.WelcomeInterface'.(âšªşşÿÿÿÿ8‘œûç–,
-…squid:UselessImportCheck"\Remove this unused import 'com.hankerzheng.minesweep.cli.view.interfaces.GameOverInterface'.(¤Âº8‘œûç–,
-squid:UselessImportCheck"XRemove this unused import 'com.hankerzheng.minesweep.cli.view.interfaces.UserInterface'.(Öğ‰¤8‘œûç–,
-tsquid:UselessImportCheck"KRemove this unused import 'com.hankerzheng.minesweep.cli.model.GameStatus'.(™ÙŞ•8‘œûç–,
-squid:UselessImportCheck"YRemove this unused import 'com.hankerzheng.minesweep.cli.controller.MineSweepController'.(Ğ¢úa8‘œûç–,

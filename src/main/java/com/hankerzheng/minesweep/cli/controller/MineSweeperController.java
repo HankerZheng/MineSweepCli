@@ -29,6 +29,15 @@ public class MineSweeperController {
         positionsLeftToCheck = 0;
     }
 
+
+    public MineSweeperView getMineSweeperView() {
+        return mineSweeperView;
+    }
+
+    public GameStatus getGameStatus() {
+        return gameStatus;
+    }
+
     public void makeMove(final GameMove move) throws Exception {
         switch (move.getOpreation()) {
             case MARK_OPERATION:
@@ -48,6 +57,8 @@ public class MineSweeperController {
         }
     }
 
+    
+
     private void userMarkPosition(final int row, final int col) throws Exception{
         preCheckPosition(row, col);
         mineSweeperView.updatePosition(row, col, MineSweeperView.MARKED);
@@ -58,7 +69,7 @@ public class MineSweeperController {
         checkPosition(row, col);
     }
 
-    public void userCheckAroundPosition(final int row, final int col) throws Exception {
+    private void userCheckAroundPosition(final int row, final int col) throws Exception {
         preCheckPosition(row, col);
         if (mineSweeperView.getPositionStatus(row, col) == MineSweeperView.UNSPOTTED) {
             throw new CannotCheckAroundPosition("You should check the position first to do this `around` operation!");
@@ -66,7 +77,7 @@ public class MineSweeperController {
         checkPositionAround(row, col);
     }
 
-    public void userUnmarkPosition(final int row, final int col) throws Exception {
+    private void userUnmarkPosition(final int row, final int col) throws Exception {
         preCheckPosition(row, col);
         if (mineSweeperView.getPositionStatus(row, col) == MineSweeperView.MARKED) {
             mineSweeperView.updatePosition(row, col, MineSweeperView.UNSPOTTED);
@@ -114,11 +125,4 @@ public class MineSweeperController {
         }
     }
 
-    public MineSweeperView getMineSweeperView() {
-        return mineSweeperView;
-    }
-
-    public GameStatus getGameStatus() {
-        return gameStatus;
-    }
 }

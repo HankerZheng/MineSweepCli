@@ -19,12 +19,12 @@ public class IOUtilsTest {
 
     @Test(expected = IncorrectUserInputException.class)
     public void shouldThrowExceptionIfInputIncorrect() throws Exception {
-        IOUtils.getUserInputFromCommandLine("r8 8", 3);
+        IOUtils.checkUserInput("r8 8", 3);
     }
 
 
     private void verify(final String userInput, final int expectedLength, final String ... splitedRes) throws Exception {
-        final String[] res = IOUtils.getUserInputFromCommandLine(userInput, expectedLength);
+        final String[] res = IOUtils.checkUserInput(userInput, expectedLength);
         for (int i = 0; i < expectedLength; i++) {
             assertEquals(splitedRes[i], res[i]);
         }

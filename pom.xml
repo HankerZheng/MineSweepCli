@@ -57,7 +57,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.hankerzheng.minesweep.cli.MineSweepApp</mainClass>
+                            <mainClass>com.hankerzheng.minesweep.cli.MineSweeperApp</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

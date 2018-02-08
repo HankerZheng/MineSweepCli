@@ -1,6 +1,6 @@
 package com.hankerzheng.minesweep.cli.view.interfaces;
 
-public class WelcomeInterface implements UserInterface {
+public class WelcomeInterfaceCMD implements UserInterface {
 
     private static final String WELCOM_INFO =
             "WELCOME TO MINESWEEP\n" +
